@@ -74,4 +74,4 @@ for recipient in recipient_list:
     subject = 'MARK Conference SWAT team applications are out!!'
     send_email(recipient, subject, image_path)
 
-print("SUCCESS!! EMAIL SENT TO ALL ID'S!!")
+print("Script Ran!")
