@@ -62,16 +62,11 @@ def send_email(to_email, subject, image_path):
         print(f"Error sending email to {to_email}: {str(e)}")
 
 recipient_list = []
-with open('cleanedSwatNames.txt', 'r') as file:
+with open('emailBot\cleanedSwatNames.txt', 'r') as file:
     for line in file:
         recipient_list.append(line.strip())
 
-
-# Save the first page of the PDF as an image
-image_path = 'swatInvite.png'
-
+image_path = 'emailBot\swatInvite.png'
 for recipient in recipient_list:
     subject = 'MARK Conference SWAT team applications are out!!'
     send_email(recipient, subject, image_path)
-
-print("Script Ran!")
